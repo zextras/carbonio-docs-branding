@@ -6,19 +6,18 @@ window.onload = function() {
 	// wait until the menu (and particularly the document-header) actually exists
 	function setLogo() {
 		var logoHeader = document.getElementById('document-header');
-		if (!logoHeader) {
+		var logo = logoHeader && document.querySelector('#document-header > a');
+		if (!logo) {
 			// the logo does not exist in the menu yet, re-try in 250ms
 			setTimeout(setLogo, 250);
 		} else {
-			var logo = $('#document-header > div');
-			logo.attr('title', brandProductName);
-			// logo.off('click').on('click', function() { window.open(brandProductURL, '_blank'); });
+			logo.setAttribute('data-cooltip', brandProductName);
 
 			menuItems = document.querySelectorAll('#main-menu > li > a');
 		}
 	}
 	function setAboutImg() {
-		var lk = document.getElementById('lokit-version');
+		var lk = document.getElementById('coolwsd-version');
 		var aboutDialog = document.getElementById('about-dialog-info');
 		if (!lk || !aboutDialog) {
 			setTimeout(setAboutImg, 250);
