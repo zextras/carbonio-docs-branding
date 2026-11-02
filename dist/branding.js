@@ -18,7 +18,7 @@ window.onload = function() {
 		}
 	}
 	function setAboutImg() {
-		var lk = document.getElementById('lokit-version');
+		var lk = document.getElementById('coolwsd-version');
 		var aboutDialog = document.getElementById('about-dialog-info');
 		if (!lk || !aboutDialog) {
 			setTimeout(setAboutImg, 250);
