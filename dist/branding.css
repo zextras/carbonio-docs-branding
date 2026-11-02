@@ -48,6 +48,17 @@ html[data-theme=dark] .document-logo {
   background-size: 30px !important;
 }
 
+#product-logo {
+  background-image: url("images/toolbar-bg-logo.svg");
+  background-position: center 8px !important;
+}
+
+#lokit-logo {
+  background: url("remote/static/lokit-extra-img.svg") center top/82px no-repeat;
+  display: flex;
+  flex-grow: 1;
+}
+
 .unobutton {
   overflow: hidden;
 }
@@ -86,19 +97,19 @@ html:not([data-theme=dark]) .w2ui-icon.textpath {
   height: 32px;
 }
 
-html:not([data-theme=dark]) .unoSave:not(.has-label) .unobutton img, html:not([data-theme=dark]) #save.notebookbar img {
+html:not([data-theme=dark]) .notebookbar-shortcuts-bar .unoSave:not(.has-label) .unobutton img, html:not([data-theme=dark]) #save.notebookbar img {
   background: url("images/lc_save_branding.svg") no-repeat center !important;
   box-sizing: border-box;
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
 }
 
-html:not([data-theme=dark]) .unoSave.saved:not(.has-label) .unobutton img, html:not([data-theme=dark]) #save.notebookbar.saved img {
+html:not([data-theme=dark]) .notebookbar-shortcuts-bar .unoSave.saved:not(.has-label) .unobutton img, html:not([data-theme=dark]) #save.notebookbar.saved img {
   background: url("images/lc_saved_branding.svg") no-repeat center !important;
   box-sizing: border-box;
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
 }
 
-html:not([data-theme=dark]) .unoSave.savemodified:not(.has-label) .unobutton img, html:not([data-theme=dark]) #save.notebookbar.savemodified img {
+html:not([data-theme=dark]) .notebookbar-shortcuts-bar .unoSave.savemodified:not(.has-label) .unobutton img, html:not([data-theme=dark]) #save.notebookbar.savemodified img {
   background: url("images/lc_savemodified_branding.svg") no-repeat center !important;
   box-sizing: border-box;
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
@@ -189,16 +200,12 @@ html:not([data-theme=dark]) .unoremoteaicontent .unobutton img, html:not([data-t
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
 }
 
-html:not([data-theme=dark]) .unoInsertPage .unobutton img, html:not([data-theme=dark]) #insertpage img {
-  background: url("images/lc_insertpage_branding.svg") no-repeat center !important;
-  box-sizing: border-box;
-  padding-left: calc( var(--btn-img-size) * 2 ) !important;
+html:not([data-theme=dark]) .unoInsertPage .unobutton img, html:not([data-theme=dark]) #insertpage img, html:not([data-theme=dark]) .ui-combobox-entry.unoInsertPage img {
+  content: url("images/lc_insertpage_branding.svg");
 }
 
-html:not([data-theme=dark]) .unoDeletePage .unobutton img, html:not([data-theme=dark]) #deletepage img {
-  background: url("images/lc_deletepage_branding.svg") no-repeat center !important;
-  box-sizing: border-box;
-  padding-left: calc( var(--btn-img-size) * 2 ) !important;
+html:not([data-theme=dark]) .unoDeletePage .unobutton img, html:not([data-theme=dark]) #deletepage img, html:not([data-theme=dark]) .ui-combobox-entry.unoDeletePage img {
+  content: url("images/lc_deletepage_branding.svg");
 }
 
 html:not([data-theme=dark]) body:not([data-userinterfacemode=classic]) .unoBasicShapes .unobutton img, html:not([data-theme=dark]) #basicshapes_ellipse img {
@@ -243,13 +250,13 @@ html:not([data-theme=dark]) .unoAutoSumMenu .unobutton img, html:not([data-theme
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
 }
 
-html:not([data-theme=dark]) .unoFunctionDialog .unobutton img, html:not([data-theme=dark]) #autosum img {
+html:not([data-theme=dark]) .unoFunctionDialog .unobutton img, html:not([data-theme=dark]) #autosum img, html:not([data-theme=dark]) .unoCalculatedFieldRun .unobutton img {
   background: url("images/lc_functiondialog_branding.svg") no-repeat center !important;
   box-sizing: border-box;
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
 }
 
-html:not([data-theme=dark]) body:not([data-doctype=spreadsheet]) #toolbar-down .unotoolbutton.multipageview img {
+html:not([data-theme=dark]) body:not([data-doctype=spreadsheet]) #toolbar-down .unotoolbutton.multipageview img, html:not([data-theme=dark]) .notebookbar .unotoolbutton.multipageview img {
   background: url("images/lc_multipageview_branding.svg") no-repeat center !important;
   box-sizing: border-box;
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
@@ -334,7 +341,7 @@ html:not([data-theme=dark]) [data-doctype=spreadsheet] .unoSidebar .unobutton im
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
 }
 
-html:not([data-theme=dark]) [data-doctype=drawing] .unoSidebar .unobutton img, html:not([data-theme=dark]) [data-doctype=drawing] .notebookbar.unoSidebarDeck\.PropertyDeck.unospan-optionstoolboxdown .unobutton img, html:not([data-theme=dark]) [data-doctype=drawing] .unoModifyPage .unobutton img, html:not([data-theme=dark]) #sidebar_modify_page img {
+html:not([data-theme=dark]) [data-doctype=drawing] .unoSidebar .unobutton img, html:not([data-theme=dark]) [data-doctype=drawing] .notebookbar.unoSidebarDeck\.PropertyDeck:not(.has-label) .unobutton img, html:not([data-theme=dark]) [data-doctype=drawing] .unoModifyPage .unobutton img, html:not([data-theme=dark]) #sidebar_modify_page img {
   background: url("images/lc_sidebar_draw.svg") no-repeat center !important;
   box-sizing: border-box;
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
@@ -358,16 +365,8 @@ html:not([data-theme=dark]) .notebookbar.unoCustomAnimation .unobutton img {
   padding-left: calc( var(--btn-img-size) * 2 ) !important;
 }
 
-html:not([data-theme=dark]) .unoInsertPage .unobutton img {
-  background: url("images/lc_insertpage_branding.svg") no-repeat center;
-  box-sizing: border-box;
-  padding-left: calc( var(--btn-img-size) * 2 ) !important;
-}
-
-html:not([data-theme=dark]) .unoDuplicatePage .unobutton img, html:not([data-theme=dark]) .unoduplicatepage .unobutton img, html:not([data-theme=dark]) #duplicatepage img {
-  background: url("images/lc_duplicatepage_branding.svg") no-repeat center !important;
-  box-sizing: border-box;
-  padding-left: calc( var(--btn-img-size) * 2 ) !important;
+html:not([data-theme=dark]) .unoDuplicatePage .unobutton img, html:not([data-theme=dark]) .unoduplicatepage .unobutton img, html:not([data-theme=dark]) #duplicatepage img, html:not([data-theme=dark]) .ui-combobox-entry.unoDuplicatePage img {
+  content: url("images/lc_duplicatepage_branding.svg");
 }
 
 html:not([data-theme=dark]) .jsdialog input[type=checkbox]:checked {
@@ -792,11 +791,11 @@ or by setting a different prefix by passing it and 2nd argument
 }
 
 /*icons*/
-#menu-forum, #Help.notebookbar #forum {
+#menu-forum, #Help.notebookbar .toolbox:has(.unoForumHelp), #help-forum-break {
   display: none;
 }
 
-#menu-report-an-issue, #Help.notebookbar #report-an-issue, #help-reportissue-break {
+#menu-report-an-issue, #Help.notebookbar .toolbox:has(.unoReportIssue), #help-reportissue-break {
   display: none;
 }
 
@@ -1073,14 +1072,12 @@ html[data-theme=dark] .sidebar.unotoolbutton.selected {
 }
 
 [data-theme=dark] .ui-tab.selected.jsdialog {
-  border-color: #555 !important;
   color: var(--co-color-text-lighter) !important;
   box-shadow: none !important;
 }
 
 [data-theme=dark] .ui-tab.jsdialog {
   background-color: transparent !important;
-  border-color: var(--color-main-background) !important;
 }
 
 .ui-tab.jsdialog:not(.selected):hover {
@@ -1108,7 +1105,7 @@ html[data-theme=dark] .sidebar.unotoolbutton.selected {
   align-self: end;
 }
 .main-nav.hasnotebookbar button.ui-tab.notebookbar {
-  height: 36px;
+  height: calc(var(--header-height) + 2);
 }
 .main-nav.hasnotebookbar button.ui-tab.notebookbar:hover {
   box-shadow: none;
@@ -1116,7 +1113,7 @@ html[data-theme=dark] .sidebar.unotoolbutton.selected {
   background-color: var(--co-color-bg-nb-tab) !important;
 }
 .main-nav.hasnotebookbar .ui-tab.selected.notebookbar {
-  height: 34px;
+  height: var(--header-height);
   margin-top: 2px;
 }
 .main-nav.hasnotebookbar .ui-tab.selected.notebookbar,
@@ -1153,8 +1150,8 @@ html:not([data-theme=dark]) .main-nav #document-name-input:not(:focus),
 html:not([data-theme=dark]) .main-nav #document-name-input.editable:not(:focus) {
   color: var(--color-background-lighter);
 }
-html:not([data-theme=dark]) .main-nav #save.saving::after,
-html:not([data-theme=dark]) .main-nav #save.saved::after {
+html:not([data-theme=dark]) .main-nav [id^=save].saving::after,
+html:not([data-theme=dark]) .main-nav [id^=save].saved::after {
   color: var(--color-background-lighter) !important;
   font-size: 10px;
 }
@@ -1164,6 +1161,14 @@ html:not([data-theme=dark]) button.ui-tab.notebookbar {
 html:not([data-theme=dark]) .ui-tab.selected.notebookbar,
 html:not([data-theme=dark]) .ui-tab.selected.notebookbar:hover {
   color: rgb(var(--doc-type)) !important;
+}
+html:not([data-theme=dark]) .ui-tab.notebookbar.contextual[role=tab]:not(.selected) {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.3));
+}
+
+.ui-tab.notebookbar.contextual[role=tab]:not(.selected) {
+  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.07));
+  color: var(--co-color-text-nb-tab);
 }
 
 #sidebar-dock-wrapper,
@@ -1502,12 +1507,6 @@ input[type=checkbox]:checked.autofilter:hover, .jsdialog input[type=checkbox]:ch
   background-position: center 8px !important;
 }
 
-#lokit-logo {
-  background: url("remote/static/lokit-extra-img.svg") center top/82px no-repeat;
-  display: flex;
-  flex-grow: 1;
-}
-
 #about-dialog hr {
   color: #A8D3E059;
 }
@@ -1653,6 +1652,10 @@ html[data-theme=dark] .button-primary:hover {
 .ui-treeview-entry.selected {
   background-color: var(--color-background-dark);
   border-color: var(--color-background-dark);
+}
+
+:root {
+  --settings-font-face: var(--native-font-stack);
 }
 
 .main-nav {
